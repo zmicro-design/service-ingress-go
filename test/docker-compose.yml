@@ -1,0 +1,13 @@
+services:
+  ingress-go:
+    restart: always
+    image: whatwewant/ingress-go:${SERVICE_INGRESS_GO_IMAGE_VERSION}
+    environment:
+      PORT: $SERVICE_INGRESS_GO_PORT
+      USERNAME: ${SERVICE_INGRESS_GO_USERNAME}
+      PASSWORD: ${SERVICE_INGRESS_GO_PASSWORD}
+      
+networks:
+  default:
+    external: true
+    name: compose-ingress
