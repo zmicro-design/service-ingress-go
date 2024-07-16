@@ -1,7 +1,7 @@
 services:
   ingress-go:
     restart: always
-    image: whatwewant/ingress:${SERVICE_INGRESS_GO_IMAGE_VERSION}
+    image: ${SERVICE_IMAGE_REGISTRY}/whatwewant/ingress:${SERVICE_INGRESS_GO_IMAGE_VERSION}
     ports:
       - 0.0.0.0:${SERVICE_INGRESS_GO_PORT}:8080
     env_file:
